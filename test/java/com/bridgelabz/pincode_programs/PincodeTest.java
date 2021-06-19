@@ -1,7 +1,6 @@
 package com.bridgelabz.pincode_programs;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class PincodeTest {
