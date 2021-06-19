@@ -10,7 +10,6 @@ public class Pincode
 		public boolean isvalidpincode(String pincode) 
 		{
 			//Regex to check valid pin code
-			
 			Pattern pattern;
 			Matcher matcher;
 			String regex = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
@@ -23,7 +22,7 @@ public class Pincode
 		public static void main(String[] args) 
 		{
 			
-			Pincode PC = new Pincode();
+			 Pincode PC = new Pincode();
 			
 			 //UC1 To check pincode is valid or not
 			String pin = "400088";
