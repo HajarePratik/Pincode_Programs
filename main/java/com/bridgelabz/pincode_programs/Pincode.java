@@ -5,17 +5,17 @@ import java.util.regex.Pattern;
 
 public class Pincode 
 {
-
-		Pattern p;
-		Matcher m;
-		
+	
 		// Method to validate the pincode
 		public boolean isvalidpincode(String pincode) 
 		{
 			//Regex to check valid pin code
+			
+			Pattern pattern;
+			Matcher matcher;
 			String regex = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
-			p = Pattern.compile(regex);
-			m = p.matcher(pincode);
+			pattern = Pattern.compile(regex);
+			matcher = p.matcher(pincode);
 			
 			return m.matches();
 		}
@@ -23,23 +23,23 @@ public class Pincode
 		public static void main(String[] args) 
 		{
 			
-			Pincode PN = new Pincode();
+			Pincode PC = new Pincode();
 			
 			 //UC1 To check pincode is valid or not
 			String pin = "400088";
-			System.out.println(pin+" is Pin Code " + " : " + PN.isvalidpincode(pin));
+			System.out.println(pin+" is Pin Code " + " : " + PC.isvalidpincode(pin));
 			
 			// UC2 To check pincode with adding a char to starting and is valid or not
 			String pin2 = "A400088";
-			System.out.println(pin2+" is Pin Code " + " : " + PN.isvalidpincode(pin2));
+			System.out.println(pin2+" is Pin Code " + " : " + PC.isvalidpincode(pin2));
 			
 			// UC3 To check pincode with adding a char to ending and is valid or not
 			String pin3 = "400088B";
-			System.out.println(pin3+" is Pin Code " + " : " + PN.isvalidpincode(pin3));
+			System.out.println(pin3+" is Pin Code " + " : " + PC.isvalidpincode(pin3));
 			
 			// UC4 To check pincode with adding a space and is valid or not
 			String pin4 = "400 088";
-			System.out.println(pin4+" is Pin Code " + " : " + PN.isvalidpincode(pin4));
+			System.out.println(pin4+" is Pin Code " + " : " + PC.isvalidpincode(pin4));
 		}
 		
 		// this method for test case 
